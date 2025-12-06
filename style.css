@@ -1,0 +1,120 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Light & Dark Theme Colors */
+:root {
+    --bg-color: #f0f0f0;
+    --display-color: #222;
+    --btn-bg: #fff;
+    --btn-hover: #e0e0e0;
+    --operator-bg: #f5923e;
+    --operator-hover: #e57c2f;
+    --equal-bg: #4caf50;
+    --equal-hover: #45a049;
+}
+
+body.dark {
+    --bg-color: #1e1e1e;
+    --display-color: #fff;
+    --btn-bg: #333;
+    --btn-hover: #444;
+    --operator-bg: #ff9500;
+    --operator-hover: #e07f00;
+    --equal-bg: #28a745;
+    --equal-hover: #218838;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+/* Calculator Container */
+.calculator {
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+/* Display */
+.display {
+    background-color: var(--btn-bg);
+    color: var(--display-color);
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    overflow-x: auto;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: var(--btn-bg);
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+/* Operator Buttons */
+.operator {
+    background-color: var(--operator-bg);
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: var(--operator-hover);
+}
+
+/* Equal Button */
+.equal {
+    background-color: var(--equal-bg);
+    color: #fff;
+    grid-column: span 1;
+    height: 100%;
+}
+
+.equal:hover {
+    background-color: var(--equal-hover);
+}
+
+/* Zero Button Full Width */
+.zero {
+    grid-column: span 2;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.theme-toggle button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
